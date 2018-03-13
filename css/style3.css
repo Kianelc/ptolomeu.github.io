@@ -589,279 +589,507 @@ footer{
       margin-top: -10px;
     }
 
+    .titulo-principal{
+      width: 100%;
+    }
+    .titulo {
+      margin-left: 0;
+    }
+
+    .titulo-principal > p {
+      margin-left: 0;
+    }
+
+    .grid2 {
+      width: 100%;
+    }
+
   }
 
 
-@media screen and (max-width: 736px){
-  .content{
-    padding: 0;
+  @media screen and (max-width: 736px){
+    .content{
+      padding: 0;
+    }
+    .feature .image img {
+      width: 100%;
+      height: 100%;
+    }
+    .feature {
+      display: block;
+      height: auto;
+      margin-bottom: 2em;
+    }
+    .feature .image {
+      float: none;
+      height: 14em;
+      margin-left: 0px;
+      width: 100%;
+      =: 100%
+      height:;
+    }
+    .feature .image {
+      display: inline-block;
+      overflow: hidden;
+    }
+    .feature .content {
+      text-align: center;
+      width: 100%;
+    }
   }
-  .feature .image img {
-    width: 100%;
-    height: 100%;
-  }
-  .feature {
-    display: block;
-    height: auto;
-    margin-bottom: 2em;
-  }
-  .feature .image {
-    float: none;
-    height: 14em;
-    margin-left: 0px;
-    width: 100%;
-    =: 100%
-    height:;
-  }
-  .feature .image {
-    display: inline-block;
-    overflow: hidden;
-  }
-  .feature .content {
-    text-align: center;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 480px){
-  .feature {
-    margin-bottom: 1em;
-  }
-}
+  @media screen and (max-width: 480px){
+    .feature {
+      margin-bottom: 1em;
+    }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .grid {
-    -webkit-box-flex: none;
-    -webkit-flex: none;
-    -ms-flex: 0 0 100%;
-    flex: none;
-    max-width: 100%;
   }
 
-  .box > h2 {
-    margin-bottom: 20px;
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .grid {
+      -webkit-box-flex: none;
+      -webkit-flex: none;
+      -ms-flex: 0 0 100%;
+      flex: none;
+      max-width: 100%;
+    }
+
+    .box > h2 {
+      margin-bottom: 20px;
+    }
+
+    .grid2 {
+      margin-top: 0px;
+      padding: 0px;
+      padding-top: 20px;
+    }
+    header > .logo > h1{
+      margin-left: 0px;
+    }
+    .capa {
+      width: 100%;
+      height: auto;
+      margin-left: 0px;
+    }
+    .img-capa{
+      width: 100%;
+      height: auto;
+    }
+    .feature.left .image {
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: -webkit-center;
+    }
+
+    .feature.right .image {
+      float: none;
+      margin-right: 0px;
+      margin-left: 0px;
+      text-align: -webkit-center;
+    }
+    .player {
+      width: 17%;
+      position: absolute;
+      top: 60%;
+      z-index: 20;
+      margin-left: 40%;
+      margin-top: -40px;
+      cursor: pointer;
+    }
+
+    .content{
+      padding: 10px;
+    }
+    /* .feature .image img {
+      width: 100%;
+      height: 100%;
+    } */
+    .feature {
+      display: block;
+      height: auto;
+      margin-bottom: 2em;
+    }
+    .feature .image {
+      float: none;
+      height: 14em;
+      margin-left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+    .feature .image {
+      display: inline-block;
+      overflow: hidden;
+    }
+    .feature .content {
+      text-align: center;
+      width: 100%;
+      padding-top: 0px;
+      margin-top: -20px;
+    }
+
+    .feature.left {
+      margin-right: 0px;
+    }
+    .feature.right{
+      padding-top: 0;
+    }
   }
 
-  .grid2 {
-    margin-top: 0px;
-    padding: 0px;
-    padding-top: 20px;
-  }
-  header > .logo > h1{
-    margin-left: 0px;
-  }
-  .capa {
-    width: 100%;
-    height: auto;
-    margin-left: 0px;
-  }
-  .img-capa{
-    width: 100%;
-    height: auto;
-  }
-  .feature.left .image {
-    float: none;
-    margin-left: 0;
-    margin-right: 0;
+  @media only screen and (max-width: 240px) and (orientation : portrait) {
+    header > .logo > h1 {
+      margin-top: 15px;
+      font-size: 25px;
+    }
+    div.link-logo {
+      margin-top: -43px;
+    }
+
+    .link-logo > a > img{
+      width: 20px;
+      height: 20px;
+    }
+
+    .titulo {
+      font-size: 25px;
+    }
+    .titulo-principal > p {
+      font-size: 12px;
+      margin-bottom: 25px;
+    }
+
+    .player {
+      top: 90%;
+    }
+
+    section > .container {
+      padding-top: 125px;
+    }
+
+    .titulo-form{
+      font-size: 15px;
+    }
+
+    form {
+      border: none;
+      padding: 0px;
+    }
+
+    section.meio > .container > h2, .box > h2{
+      font-size: 24px;
+    }
+
+    .row > .col > h3, .content > h3{
+      font-size: 15px;
+    }
+
+    .row > .col > p, .content > p{
+      font-size: 12px;
+    }
+
+    .feature.left .image, .feature.right .image{
+      margin-bottom: -50px;
+      margin-top: -55px;
+    }
+
+    .section-c > .container-1 > p {
+      line-height: 15px;
+    }
   }
 
-  .feature.right .image {
-    float: none;
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-  .player {
-    width: 17%;
-    position: absolute;
-    top: 60%;
-    z-index: 20;
-    margin-left: 40%;
-    margin-top: -40px;
-    cursor: pointer;
+  @media only screen and (max-width: 1024px) and (orientation : landscape) {
+    .row {
+      -ms-flex-wrap: none;
+      display: block;
+      margin-right: 0px;
+      margin-left: 0px;
+      -ms-flex-pack: none;
+    }
+
+    .modal-submit{
+      width: auto;
+    }
+
+    .titulo {
+      margin-left: 0px;
+    }
+
+    .titulo-principal > p {
+      margin-left: 0px;
+    }
+
+    label {
+      padding-left: 0;
+    }
+
+    div.link-logo{
+      margin-right: 0;
+    }
+
+    .col {
+
+      max-width: 100%;
+      padding-right: 0px;
+      padding-left: 0px;
+      text-align: center;
+    }
+
+    section.meio > .container {
+      padding-bottom: 10px;
+    }
+
+    header > .logo > h1{
+      margin-left: 0px;
+    }
+    .grid {
+      -webkit-box-flex: none;
+      -webkit-flex: none;
+      -ms-flex: 0 0 100%;
+      flex: none;
+      max-width: 100%;
+    }
+
+    .grid2 {
+      margin-top: 0px;
+      padding: 0px;
+      padding-top: 20px;
+    }
+
+    .checkbox {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: inline;
+      padding-top: 2px;
+      font-size: 14px;
+    }
+
+    .capa {
+      width: auto;
+      height: auto;
+      margin-left: 0px;
+      position: relative;
+      background-color: white;
+      box-shadow: 2px 2px 2px #ccc;
+      /* opacity: 0.5; */
+    }
+
+    .img-capa {
+      width: 100%;
+      height: 100%;
+      border: 5px white solid;
+      opacity: 0.3;
+      z-index: 1;
+      border-bottom-width: 0px;
+      filter: alpha(opacity=50);
+    }
+
+    .player {
+      width: 17%;
+      position: absolute;
+      top: 60%;
+      z-index: 20;
+      margin-left: 40%;
+      margin-top: -40px;
+      cursor: pointer;
+    }
+
+    .content{
+      padding: 10px;
+    }
+
+    .feature {
+      display: block;
+      height: auto;
+      margin-bottom: 2em;
+    }
+    .feature .image {
+      float: none;
+      height: 14em;
+      margin-left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+    .feature .image {
+      display: inline-block;
+      overflow: hidden;
+    }
+    .feature .content {
+      text-align: center;
+      width: 100%;
+      padding-top: 0px;
+      margin-top: -20px;
+    }
+
+    .feature.left .image, .feature.right .image {
+      margin-left: 0px;
+      margin-right: 0px;
+      text-align: -webkit-center;
+    }
+
+    .feature.left {
+      margin-right: 0;
+    }
+    .feature.right{
+      padding-top: 0;
+    }
+
   }
 
-  .content{
-    padding: 10px;
-  }
-  .feature .image img {
-    width: 100%;
-    height: 100%;
-  }
-  .feature {
-    display: block;
-    height: auto;
-    margin-bottom: 2em;
-  }
-  .feature .image {
-    float: none;
-    height: 14em;
-    margin-left: 0px;
-    width: 100%;
-    =: 100%
-    height:;
-  }
-  .feature .image {
-    display: inline-block;
-    overflow: hidden;
-  }
-  .feature .content {
-    text-align: center;
-    width: 100%;
-    padding-top: 0px;
-    margin-top: -20px;
+  /*IPHONE X PANORAMA*/
+  @media only screen
+  and (min-device-width : 375px)
+  and (max-device-width : 812px)
+  and (-webkit-device-pixel-ratio : 3)
+  and (orientation : landscape) {
+    .feature.right .image {
+      margin-right: 20px;
+      margin-left: 0px;
+    }
+
+    .feature.left .image {
+      margin-left: 0px;
+      margin-right: 20px;
+    }
+
+    div.link-logo {
+      margin-right: 30px;
+    }
+
+    .titulo {
+      margin-left: -10px;
+    }
+
+    .titulo-principal > p {
+      margin-left: -10px;
+    }
+
   }
 
-  .feature.left {
-    margin-right: 0px;
-  }
-  .feature.right{
-    padding-top: 0;
-  }
-}
-
-/*IPHONE X PANORAMA*/
-@media only screen
-and (min-device-width : 375px)
-and (max-device-width : 812px)
-and (-webkit-device-pixel-ratio : 3)
-and (orientation : landscape) {
-.feature.right .image {
-    margin-right: 20px;
-    margin-left: 0px;
-}
-
-.feature.left .image {
-    margin-left: 0px;
-    margin-right: 20px;
-}
-
-div.link-logo {
-    margin-right: 30px;
-}
-
-.titulo {
-    margin-left: -10px;
-}
-
-.titulo-principal > p {
-    margin-left: -10px;
-}
-
-}
-
-/*IPAD RETRATO*/
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait) {
-  .player {
-    top: 44%;
-  }
-}
-
-/*IPAD PAISAGEM*/
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-  .grid {
-    -webkit-box-flex: none;
-    -webkit-flex: none;
-    -ms-flex: 0 0 100%;
-    flex: none;
-    max-width: 100%;
+  /*IPAD RETRATO*/
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+    .player {
+      top: 44%;
+    }
   }
 
-  .grid2 {
-    margin-top: 0px;
-    padding: 0px;
-    width: 86%;
-    padding-top: 20px;
+  /*IPAD PAISAGEM*/
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+    .grid {
+      -webkit-box-flex: none;
+      -webkit-flex: none;
+      -ms-flex: 0 0 100%;
+      flex: none;
+      max-width: 100%;
+    }
+
+    .grid2 {
+      margin-top: 0px;
+      padding: 0px;
+      width: 86%;
+      padding-top: 20px;
+    }
+
+    .img-capa {
+      width: 100%;
+      height: auto;
+    }
+
+    .capa {
+      width: 100%;
+      height: auto;
+      margin-left: 0px;
+    }
+
+    .player {
+      top: 55%;
+      margin-left: 40%;
+    }
+
+    header > .logo > h1 {
+      margin-left: 20px;
+    }
+
+    div.link-logo {
+      margin-right: 65px;
+    }
+
+    .titulo {
+      margin-left: 5%;
+    }
+
+    .titulo-principal > p {
+      margin-left: 5%;
+    }
   }
 
-  .img-capa {
-    width: 100%;
-    height: auto;
+  @media only screen
+  and (min-device-width: 480px)
+  and (max-device-width: 800px)
+  and (orientation: landscape){
+    .titulo {
+      margin-left: -3%;
+    }
   }
 
-  .capa {
-    width: 100%;
-    height: auto;
-    margin-left: 0px;
-  }
+  /*IPAD PRO*/
+  @media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1366px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .grid {
+      -webkit-box-flex: none;
+      -webkit-flex: none;
+      -ms-flex: 0 0 100%;
+      flex: none;
+      max-width: 100%;
+    }
 
-  .player {
-    top: 55%;
-    margin-left: 40%;
-  }
+    .grid2 {
+      margin-top: 0px;
+      padding: 0px;
+      width: 86%;
+      padding-top: 20px;
+    }
 
-  header > .logo > h1 {
-    margin-left: 20px;
-  }
+    .img-capa {
+      width: 100%;
+      height: auto;
+    }
 
-  div.link-logo {
-    margin-right: 65px;
-  }
+    .capa {
+      width: 100%;
+      height: auto;
+      margin-left: 0px;
+    }
 
-  .titulo {
-    margin-left: 5%;
-  }
+    .player {
+      top: 55%;
+      margin-left: 40%;
+    }
 
-  .titulo-principal > p {
-    margin-left: 5%;
-  }
-}
+    header > .logo > h1 {
+      margin-left: 20px;
+    }
 
-/*IPAD PRO*/
-@media only screen
-and (min-device-width: 1024px)
-and (max-device-width: 1366px)
-and (orientation: portrait)
-and (-webkit-min-device-pixel-ratio: 1.5) {
-  .grid {
-    -webkit-box-flex: none;
-    -webkit-flex: none;
-    -ms-flex: 0 0 100%;
-    flex: none;
-    max-width: 100%;
-  }
+    div.link-logo {
+      margin-right: 65px;
+    }
 
-  .grid2 {
-    margin-top: 0px;
-    padding: 0px;
-    width: 86%;
-    padding-top: 20px;
-  }
+    .titulo {
+      margin-left: 5%;
+    }
 
-  .img-capa {
-    width: 100%;
-    height: auto;
+    .titulo-principal > p {
+      margin-left: 5%;
+    }
   }
-
-  .capa {
-    width: 100%;
-    height: auto;
-    margin-left: 0px;
-  }
-
-  .player {
-    top: 55%;
-    margin-left: 40%;
-  }
-
-  header > .logo > h1 {
-    margin-left: 20px;
-  }
-
-  div.link-logo {
-    margin-right: 65px;
-  }
-
-  .titulo {
-    margin-left: 5%;
-  }
-
-  .titulo-principal > p {
-    margin-left: 5%;
-  }
-}

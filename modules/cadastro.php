@@ -6,28 +6,35 @@
 <body>
   <?php
   //CONEXÃO BANCO
-  $host='localhost';
-  $bd = 'formulario';
-  $user = 'root';
+  $dsn = 'mysql:host=localhost;port=3307;dbname=formulario';
+  $usuario = 'root';
   $senha = 'usbw';
+
+  // Conectando
+  try {
+    $pdo = new PDO($dsn, $usuario, $senha);
+  } catch (PDOException $e) {
+    echo $e->getMessage();
+    exit(1);
+  }
 
   $nome = $_POST ["nome"];
   $email = $_POST ["email"];
   $unidade = $_POST["unidade"];
   $news = $_POST["news"];
 
-  $conexao = mysql_connect($host, $user, $senha);
-  if(!$conexao){
-    die("Erro de conexão com localhost, o seguinte erro ocorreu ->".mysql_error());
-  }
-  $banco = mysql_select_db($bd, $conexao);
-  if(!$banco){
-    die("Erro de conexão com o banco de dados, o seguinte erro ocorreu ->".mysql_error());
-  }
+  // Preparando statement
+  $stmt = $pdo->prepare("INSERT INTO cadastro(nome, email, unidade, news) VALUES (:nome, :email, :unidade, :news)");
+  $stmt->bindParam( ':nome', $nome );
+  $stmt->bindParam( ':email', $email );
+  $stmt->bindParam( ':unidade', $unidade );
+  $stmt->bindParam( ':news', $news );
 
-  $query = "INSERT INTO `cadastro` (`nome`, `email`, `unidade`, `news`) VALUES ('$nome', '$email', '$unidade', '$news')";
+  //http://rberaldo.com.br/pdo-mysql/
 
-  mysql_query($query, $conexao);
+  // Executando statement
+  $stmt->execute();
+
   echo "Seu cadastro foi realizado com sucesso!"
   ?>
 </body>
