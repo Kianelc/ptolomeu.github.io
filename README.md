@@ -1,2 +1,11 @@
-# ptolomeu.github.io
-O projeto Ptolomeu tem como objetivo a realização de um hotsite responsivos e acessível.
+###### Ptolomeu
+
+# Components Hotsite
+
+> Javascript Pure
+
+> HTML5
+
+> CSS3
+
+> PHP

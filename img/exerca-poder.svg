@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="7772 1349 139 139">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #4fc3f7;
+      }
+
+      .cls-3 {
+        fill: #263238;
+        opacity: 0.1;
+      }
+
+      .cls-4 {
+        fill: #f57c00;
+      }
+
+      .cls-5 {
+        fill: #ff9800;
+      }
+
+      .cls-6 {
+        filter: url(#Path_194);
+      }
+
+      .cls-7 {
+        filter: url(#Ellipse_25);
+      }
+    </style>
+    <filter id="Ellipse_25" x="7772" y="1349" width="139" height="139" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_194" x="7802" y="1384" width="78" height="68" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_374" data-name="Group 374" transform="translate(6197)">
+    <g class="cls-7" transform="matrix(1, 0, 0, 1, -6197, 0)">
+      <circle id="Ellipse_25-2" data-name="Ellipse 25" class="cls-1" cx="60.5" cy="60.5" r="60.5" transform="translate(7781 1355)"/>
+    </g>
+    <g id="Group_345" data-name="Group 345" transform="translate(1614 1390)">
+      <g class="cls-6" transform="matrix(1, 0, 0, 1, -7811, -1390)">
+        <path id="Path_194-2" data-name="Path 194" class="cls-1" d="M56,50H4a4.012,4.012,0,0,1-4-4V4A4.012,4.012,0,0,1,4,0H56a4.012,4.012,0,0,1,4,4V46A4.012,4.012,0,0,1,56,50Z" transform="translate(7811 1390)"/>
+      </g>
+      <path id="Path_195" data-name="Path 195" class="cls-2" d="M60,10H0V4A4.012,4.012,0,0,1,4,0H56a4.012,4.012,0,0,1,4,4Z"/>
+      <rect id="Rectangle_85" data-name="Rectangle 85" class="cls-3" width="60" height="2" transform="translate(0 10)"/>
+      <g id="Group_353" data-name="Group 353">
+        <path id="Path_196" data-name="Path 196" class="cls-4" d="M8,7H6A2,2,0,0,1,6,3H8A2,2,0,0,1,8,7Z"/>
+      </g>
+      <g id="Group_354" data-name="Group 354">
+        <path id="Path_197" data-name="Path 197" class="cls-5" d="M16,7H14a2,2,0,0,1,0-4h2a2,2,0,0,1,0,4Z"/>
+      </g>
+      <path id="Path_198" data-name="Path 198" class="cls-3" d="M8,3H6A2.006,2.006,0,0,0,4,5a.9.9,0,0,0,.1.5A1.927,1.927,0,0,1,6,4H8A1.927,1.927,0,0,1,9.9,5.5.9.9,0,0,0,10,5,2.006,2.006,0,0,0,8,3Z"/>
+      <path id="Path_199" data-name="Path 199" class="cls-3" d="M16,3H14a2.006,2.006,0,0,0-2,2,.9.9,0,0,0,.1.5A1.927,1.927,0,0,1,14,4h2a1.927,1.927,0,0,1,1.9,1.5A.9.9,0,0,0,18,5,2.006,2.006,0,0,0,16,3Z"/>
+    </g>
+  </g>
+</svg>
