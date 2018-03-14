@@ -9,8 +9,7 @@ window.onclick = function(event) {
     console.log('aqui');
     modal.style.display = "none";
     pauseVideo();
-  }
-  else if(event.target == img){
+  }else if(event.target == img){
     playVideo();
   }
 }
@@ -43,5 +42,3 @@ function playVideo(){
 function pauseVideo() {
   player.pauseVideo();
 }
-
-/*http://jsfiddle.net/ZcMkt/*/
