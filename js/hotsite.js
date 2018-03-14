@@ -3,22 +3,19 @@ function myFunction() {
 }
 
 window.onclick = function(event) {
-  console.log(event);
-  console.log(typeof event.target);
   if (event.target == modal) {
-    console.log('aqui');
     modal.style.display = "none";
     pauseVideo();
   }else if(event.target == img){
     playVideo();
   }
 }
-
+/*
 function send(form) {
   var strMessage1 = document.getElementById("sendForm") ;
   strMessage1.innerHTML = '<div> <h2>Muito obrigado!</h2> Por favor aguarde o convite para o beta. </div>';
   return false;
-}
+}*/
 
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";

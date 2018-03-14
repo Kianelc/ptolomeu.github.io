@@ -1,34 +1,17 @@
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html"; charset="utf-8"/>
-  <title>Ptolomeu</title>
-</head>
-<body>
   <?php
   //CONEXÃO BANCO
-  $host='localhost:3306';
-  $bd = 'formulario';
-  $user = 'root';
-  $senha = '';
+  $con = new PDO("mysql:host=localhost:3307;dbname=formulario", "root", "usbw");
 
   $nome = $_POST ["nome"];
   $email = $_POST ["email"];
   $unidade = $_POST["unidade"];
   $news = $_POST["news"];
 
-  $conexao = mysql_connect($host, $user, $senha);
-  if(!$conexao){
-    die("Erro de conexão com localhost, o seguinte erro ocorreu ->".mysql_error());
-  }
-  $banco = mysql_select_db($bd, $conexao);
-  if(!$banco){
-    die("Erro de conexão com o banco de dados, o seguinte erro ocorreu ->".mysql_error());
-  }
+  $stmt = $con->prepare("INSERT INTO cadastro(nome, email, unidade, news) VALUES(?, ?, ?, ?)");
+  $stmt->bindParam(1,$nome);
+  $stmt->bindParam(2,$email);
+  $stmt->bindParam(3,$unidade);
+  $stmt->bindParam(4,$news);
+  $stmt->execute();
 
-  $query = "INSERT INTO `cadastro` (`nome`, `email`, `unidade`, `news`) VALUES ('$nome', '$email', '$unidade', '$news')";
-
-  mysql_query($query, $conexao);
-  echo "Seu cadastro foi realizado com sucesso!"
   ?>
-</body>
-</html>
