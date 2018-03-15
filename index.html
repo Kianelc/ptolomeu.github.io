@@ -9,13 +9,10 @@
   <meta name="author" content="">
   <link rel="icon" href="img/favicon.ico">
   <link href="css/style3.css" rel="stylesheet">
-  <script src="js/hotsite.js"></script>
-  <title>Ptolomeu</title>
-
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-
+  <title>Ptolomeu</title>
+  <script src="js/hotsite.js"></script>
+  <!--SCRIPT CHATBOT-->
   <script type="text/javascript">
   window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
   d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
@@ -23,177 +20,171 @@
     $.src="https://v2.zopim.com/?5XP4lkxyNprll9tP2vRDzMkMjXPYl901";z.t=+new Date;$.
     type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
     </script>
-
+    <!--SCRIPT FORMULARIO (AJAX+PHP)-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script>
     $(document).ready(function () {
-
       $('#myform').submit(function() {
         var dados = $('#myform').serialize();
-        console.log('entrou');
         $.ajax({
           type : 'POST',
           url  : 'modules/cadastro.php',
           data : dados,
-          dataType: 'json',
-          success: function( ) {
-            return true;
+          dataType: 'html',
+          success: function (data) {
+            var $title = $('<h3>').text('Muito obrigado!');
+            var $description = $('<p>').text('Por favor, aguarde o convite para o beta.');
+            $('#sendForm')
+            .append($title)
+            .append($description);
+            $( "#submit" ).hide();
+            $('#myform')[0].reset();
           }
-
-          /*function(data) {
-          var $title = $('<h2>').text('Muito obrigado!');
-          var $description = $('<p>').text('Por favor aguarde o convite para o beta.');
-          $('#sendForm')
-          .append($title)
-          .append($description);
-        }*/
+        });
+        return false;
       });
-
-      return false;
     });
-  });
-  </script>
-</head>
-<body>
-  <header class="head-logo">
-    <div class="logo container-1">
-      <h1>Ptolomeu<span class="section-color">.</span></h1>
-      <div class="link-logo">
-        <a href="https://www.facebook.com/ptolomeuonline/" target="_blank"><img src="img/facebook-logo.png" width="30" height="30" alt="Facebook"></a>
-        <a href="https://twitter.com/ptolomeuonline/" target="_blank"><img src="img/twitter-logo.png" width="30" height="30" alt="Twitter"></a>
-      </div>
-    </div>
-  </header>
-
-  <section class="inicio" id="inicio">
-    <div class="container">
-      <div class="titulo-principal">
-        <h1 class="titulo">Organize documentos em segundos</h1>
-        <p>Descubra o assistente virtual que te dá muito mais produtividade</p>
-      </div>
-      <div class="row">
-        <div class="grid">
-          <div class="capa">
-            <a href="#" id="myBtn" onclick="return myFunction();">
-              <img src="img/player.svg" id="img" class="player">
-            </a>
-            <img src="img/capa2.png" class="img-capa">
-          </div>
-        </div>
-        <div class="grid grid2">
-          <form class="modal-container" id="myform" action="modules/cadastro.php" method="POST">
-            <h1 class="titulo-form">Inscreva-se para o beta</h1>
-            <input class="modal-input modal-border modal-margin-bottom" type="text" name="nome" placeholder="Nome" required>
-            <input class="modal-input modal-border modal-margin-bottom" type="email" name="email" placeholder="E-mail" required>
-            <input class="modal-input modal-border modal-margin-bottom" type="text" name="unidade" placeholder="Unidade" required>
-            <div class="checkbox">
-              <input type="checkbox" id="option" value="ATIVO" name="news"/>
-              <label for="option">Receba a nossa newsletter
-                <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg"><path d="M21,2 C13.4580219,4.16027394 1.62349378,18.3117469 3,19 C9.03653312,22.0182666 25.2482171,10.3758914 30,8 C32.9363621,6.53181896 41.321398,1.67860195 39,4 C36.1186011,6.8813989 3.11316157,27.1131616 5,29 C10.3223659,34.3223659 30.6434647,19.7426141 35,18 C41.2281047,15.5087581 46.3445303,13.6554697 46,14 C42.8258073,17.1741927 36.9154967,19.650702 33,22 C30.3136243,23.6118254 17,31.162498 17,34 C17,40.4724865 54,12.4064021 54,17 C54,23.7416728 34,27.2286213 34,37" id="Path-1" stroke-width="4" fill="none" stroke="#109bf8" stroke-dasharray="270" stroke-dashoffset="270"></path></svg>
-              </label>
-            </div>
-            <div id="sendForm"></div>
-            <input class="modal-submit" id="submit" type="submit" name="enviar"value="Enviar">
-          </form>
-        </div>
-      </div>
-      <div id="modal" class="modal modal-video">
-        <div id="player"></div>
-        <!--<iframe width="720" height="405" src="https://www.youtube.com/embed/fkR2sqr1FAc?rel=0&amp;controls=0&amp;showinfo=0" id="video-ptolomeu" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe-->
-      </div>
-    </div>
-  </section>
-
-  <section class="meio" id="meio">
-    <div class="container">
-      <h2>Vantagens</h2>
-      <div class="row">
-        <div class="col">
-          <img src="img/domine-conteudo.svg" alt="Ilustração do globo terrestre" class="img-vantagens">
-          <h3>Domine o conteúdo</h3>
-          <p>Com o Ptolomeu você explora o conjunto de documentos e descobre como ele se comporta</p>
-        </div>
-        <div class="col">
-          <img src="img/detenha-controle.svg" alt="Ilustração de uma folha embaixo de um lápis" class="img-vantagens">
-          <h3>Detenha o controle</h3>
-          <p>Crie categorias para triar e classificar seus documentos com uma abordagem DATA DRIVEN</p>
-        </div>
-        <div class="col">
-          <img src="img/nao-robo.svg" alt="Ilustração de dois balões de conversa" class="img-vantagens">
-          <h3>Não seja o robô</h3>
-          <p>Classifique documentos automaticamente e receba insights de como melhorar seu processo de organização</p>
-        </div>
-        <div class="col">
-          <img src="img/exerca-poder.svg" alt="Ilustração de uma página web" class="img-vantagens">
-          <h3>Exerça o poder</h3>
-          <p>Integre o Ptolomeu nos seus sistemas e ganhe seus super-poderes no dia-a-dia</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="box alt container">
-    <h2>Aplicações</h2>
-    <section class="feature left">
-      <div class="image">
-        <img src="img/triagem.svg" width="383" height="269" alt="Ilustração de um tablet recebendo e encaminhamento processos">
-      </div>
-      <div class="content">
-        <h3>Automatização de processos</h3>
-        <p>Separe processos com critérios explícitos e transparentes, classifique por assunto/matéria ou ainda, receba recomendações de encaminhamento, para triagem ou elaboração de parecer</p>
-      </div>
-    </section>
-    <section class="feature right">
-      <div class="image">
-        <img src="img/leads.svg" width="383" height="269" alt="Ilustração de um celular identificando leads">
-      </div>
-      <div class="content">
-        <h3>Qualificação de leads</h3>
-        <p>Um post do Facebook ou um comentário em blog também são documentos. O Ptolomeu pode te ajudar para usar esse tipo de mídia social afim de identificar possíveis leads</p>
-      </div>
-    </section>
-    <section class="feature left">
-      <div class="image">
-        <img src="img/curriculo.svg" width="383" height="269" alt="Ilustração de um tablet analisando currículos">
-      </div>
-      <div class="content">
-        <h3>Avaliação de currículos</h3>
-        <p>Selecione currículos de forma muito mais efetiva, descubra termos correlacionados às competências de candidatos, utilize de técnicas para tornar a seleção mais orientada a dados</p>
-      </div>
-    </section>
-    <section class="feature right">
-      <div class="image">
-        <img src="img/verifica.svg" width="383" height="269" alt="Ilustração de um tablet verificando documentos">
-      </div>
-      <div class="content">
-        <h3>Verificação de documentos</h3>
-        <p>Receba avisos quando um documento recebido provavelmente não é o que foi solicitado, ou até mesmo automatize a tarefa para avisar seu usuário que pode estar havendo um engano</p>
-      </div>
-    </section>
-    <section class="feature left">
-      <div class="image">
-        <img src="img/academia.svg" width="383" height="269" alt="Ilustração de uma mesa de estudo">
-      </div>
-      <div class="content">
-        <h3>Academia e pesquisa:</h3>
-        <p>Escolha os artigos que merecem atenção mais rapidamente</p>
-      </div>
-    </section>
-  </div>
-
-  <footer id="fim">
-    <div class="section section-c">
-      <div class="container-1">
-        <h3>Ptolomeu</h3>
-        <p>Quer saber mais?</p>
-        <p style="font-weight: 600;">Entre em contato com a gente.</p>
-        <p style="margin-top: 30px; margin-bottom: 5px;">Nos siga nas nossas redes sociais: </p>
-        <div class="section-img">
+    </script>
+  </head>
+  <body>
+    <header class="head-logo">
+      <div class="logo container-1">
+        <h1>Ptolomeu<span class="section-color">.</span></h1>
+        <div class="link-logo">
           <a href="https://www.facebook.com/ptolomeuonline/" target="_blank"><img src="img/facebook-logo.png" width="30" height="30" alt="Facebook"></a>
           <a href="https://twitter.com/ptolomeuonline/" target="_blank"><img src="img/twitter-logo.png" width="30" height="30" alt="Twitter"></a>
         </div>
       </div>
+    </header>
+
+    <section class="inicio" id="inicio">
+      <div class="container">
+        <div class="titulo-principal">
+          <h1 class="titulo">Organize documentos em segundos</h1>
+          <p>Descubra o assistente virtual que te dá muito mais produtividade</p>
+        </div>
+        <div class="row">
+          <div class="grid">
+            <div class="capa">
+              <a href="#" id="myBtn" onclick="return myFunction();">
+                <img src="img/player.svg" id="img" class="player">
+              </a>
+              <img src="img/capa2.png" class="img-capa">
+            </div>
+          </div>
+          <div class="grid grid2">
+            <form class="modal-container" id="myform" action="modules/cadastro.php" method="POST">
+              <h1 class="titulo-form">Inscreva-se para o beta</h1>
+              <input class="modal-input modal-border modal-margin-bottom" type="text" name="nome" placeholder="Nome" required>
+              <input class="modal-input modal-border modal-margin-bottom" type="email" name="email" placeholder="E-mail" required>
+              <input class="modal-input modal-border modal-margin-bottom" type="text" name="unidade" placeholder="Unidade" required>
+              <div class="checkbox">
+                <input type="checkbox" id="option" value="ATIVO" name="news"/>
+                <label for="option">Receba a nossa newsletter
+                  <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg"><path d="M21,2 C13.4580219,4.16027394 1.62349378,18.3117469 3,19 C9.03653312,22.0182666 25.2482171,10.3758914 30,8 C32.9363621,6.53181896 41.321398,1.67860195 39,4 C36.1186011,6.8813989 3.11316157,27.1131616 5,29 C10.3223659,34.3223659 30.6434647,19.7426141 35,18 C41.2281047,15.5087581 46.3445303,13.6554697 46,14 C42.8258073,17.1741927 36.9154967,19.650702 33,22 C30.3136243,23.6118254 17,31.162498 17,34 C17,40.4724865 54,12.4064021 54,17 C54,23.7416728 34,27.2286213 34,37" id="Path-1" stroke-width="4" fill="none" stroke="#109bf8" stroke-dasharray="270" stroke-dashoffset="270"></path></svg>
+                </label>
+              </div>
+              <div id="sendForm"></div>
+              <input class="modal-submit" id="submit" type="submit" name="enviar" value="Enviar">
+            </form>
+          </div>
+        </div>
+        <div id="modal" class="modal modal-video">
+          <div id="player"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="meio" id="meio">
+      <div class="container">
+        <h2>Vantagens</h2>
+        <div class="row">
+          <div class="col">
+            <img src="img/domine-conteudo.svg" alt="Ilustração do globo terrestre" class="img-vantagens">
+            <h3>Domine o conteúdo</h3>
+            <p>Com o Ptolomeu você explora o conjunto de documentos e descobre como ele se comporta</p>
+          </div>
+          <div class="col">
+            <img src="img/detenha-controle.svg" alt="Ilustração de uma folha embaixo de um lápis" class="img-vantagens">
+            <h3>Detenha o controle</h3>
+            <p>Crie categorias para triar e classificar seus documentos com uma abordagem DATA DRIVEN</p>
+          </div>
+          <div class="col">
+            <img src="img/nao-robo.svg" alt="Ilustração de dois balões de conversa" class="img-vantagens">
+            <h3>Não seja o robô</h3>
+            <p>Classifique documentos automaticamente e receba insights de como melhorar seu processo de organização</p>
+          </div>
+          <div class="col">
+            <img src="img/exerca-poder.svg" alt="Ilustração de uma página web" class="img-vantagens">
+            <h3>Exerça o poder</h3>
+            <p>Integre o Ptolomeu nos seus sistemas e ganhe seus super-poderes no dia-a-dia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="box alt container">
+      <h2>Aplicações</h2>
+      <section class="feature left">
+        <div class="image">
+          <img src="img/triagem.svg" width="383" height="269" alt="Ilustração de um tablet recebendo e encaminhamento processos">
+        </div>
+        <div class="content">
+          <h3>Automatização de processos</h3>
+          <p>Separe processos com critérios explícitos e transparentes, classifique por assunto/matéria ou ainda, receba recomendações de encaminhamento, para triagem ou elaboração de parecer</p>
+        </div>
+      </section>
+      <section class="feature right">
+        <div class="image">
+          <img src="img/leads.svg" width="383" height="269" alt="Ilustração de um celular identificando leads">
+        </div>
+        <div class="content">
+          <h3>Qualificação de leads</h3>
+          <p>Um post do Facebook ou um comentário em blog também são documentos. O Ptolomeu pode te ajudar para usar esse tipo de mídia social afim de identificar possíveis leads</p>
+        </div>
+      </section>
+      <section class="feature left">
+        <div class="image">
+          <img src="img/curriculo.svg" width="383" height="269" alt="Ilustração de um tablet analisando currículos">
+        </div>
+        <div class="content">
+          <h3>Avaliação de currículos</h3>
+          <p>Selecione currículos de forma muito mais efetiva, descubra termos correlacionados às competências de candidatos, utilize de técnicas para tornar a seleção mais orientada a dados</p>
+        </div>
+      </section>
+      <section class="feature right">
+        <div class="image">
+          <img src="img/verifica.svg" width="383" height="269" alt="Ilustração de um tablet verificando documentos">
+        </div>
+        <div class="content">
+          <h3>Verificação de documentos</h3>
+          <p>Receba avisos quando um documento recebido provavelmente não é o que foi solicitado, ou até mesmo automatize a tarefa para avisar seu usuário que pode estar havendo um engano</p>
+        </div>
+      </section>
+      <section class="feature left">
+        <div class="image">
+          <img src="img/academia.svg" width="383" height="269" alt="Ilustração de uma mesa de estudo">
+        </div>
+        <div class="content">
+          <h3>Academia e pesquisa:</h3>
+          <p>Escolha os artigos que merecem atenção mais rapidamente</p>
+        </div>
+      </section>
     </div>
-  </footer>
-</body>
-</html>
+
+    <footer id="fim">
+      <div class="section section-c">
+        <div class="container-1">
+          <h3>Ptolomeu</h3>
+          <p>Quer saber mais?</p>
+          <p style="font-weight: 600;">Entre em contato com a gente.</p>
+          <p style="margin-top: 30px; margin-bottom: 5px;">Nos siga nas nossas redes sociais: </p>
+          <div class="section-img">
+            <a href="https://www.facebook.com/ptolomeuonline/" target="_blank"><img src="img/facebook-logo.png" width="30" height="30" alt="Facebook"></a>
+            <a href="https://twitter.com/ptolomeuonline/" target="_blank"><img src="img/twitter-logo.png" width="30" height="30" alt="Twitter"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  </html>

@@ -1,6 +1,8 @@
   <?php
   //CONEXÃO BANCO
-  $con = new PDO("mysql:host=localhost:3307;dbname=formulario", "root", "usbw");
+
+  try{
+  $con = new PDO("mysql:host=localhost:3306;dbname=formulario", "root", "");
 
   $nome = $_POST ["nome"];
   $email = $_POST ["email"];
@@ -13,5 +15,9 @@
   $stmt->bindParam(3,$unidade);
   $stmt->bindParam(4,$news);
   $stmt->execute();
+}catch(PDOException $e) {
+    echo 'ERROR: ' . $e->getMessage();
+}
+
 
   ?>

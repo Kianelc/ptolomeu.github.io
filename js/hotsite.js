@@ -10,12 +10,6 @@ window.onclick = function(event) {
     playVideo();
   }
 }
-/*
-function send(form) {
-  var strMessage1 = document.getElementById("sendForm") ;
-  strMessage1.innerHTML = '<div> <h2>Muito obrigado!</h2> Por favor aguarde o convite para o beta. </div>';
-  return false;
-}*/
 
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
@@ -27,7 +21,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '360',
     width: '640',
-    videoId: 'fkR2sqr1FAc',
+    videoId: 'ozYqc4Ba51k',
     playerVars: { 'autoplay': 0, 'controls': 0 },
   });
 }
