@@ -1,8 +1,7 @@
   <?php
-  //CONEXÃO BANCO
-
+ 
   try{
-  $con = new PDO("mysql:host=localhost:3306;dbname=formulario", "root", "");
+  $con = new PDO("mysql:host=localhost;dbname=formulario", "root", "usbw");
 
   $nome = $_POST ["nome"];
   $email = $_POST ["email"];
